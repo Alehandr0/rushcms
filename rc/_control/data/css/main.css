@@ -1,0 +1,237 @@
+html{
+	min-height: 100%;
+	background-color: #fff;
+}
+body{
+	margin: 0;
+	padding: 0px 0px 20px 0px;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	color: #333;
+	overflow-y: scroll;
+}
+img{
+	vertical-align: middle;
+}
+a{
+	color: #1079c2;
+	outline: none;
+	text-decoration: none;
+}
+a:visited{
+	color: #1079c2;
+}
+a.novisited:visited{
+	color: #ff0000;
+}
+a:hover{
+	color: #ff0000;
+	border-color: #ff0000;
+}
+a.novisited:hover{
+	color: #ff0000;
+	border-color: #ff0000;
+}
+input, textarea, select{
+	outline: none;
+}
+.clear{
+	clear: both;
+}
+.off{
+	display: none;
+}
+
+.std_block{
+	position: relative;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0px 20px 0px 20px;
+}
+@media (max-width: 800px){
+	
+	.std_block{
+		padding: 0px;
+	}
+	
+}
+
+#auth_bar{
+	text-align: right;
+	padding: 10px 20px 10px 20px;
+}
+#auth_bar > span{
+	color: #1079c2;
+	margin: 0px 0px 0px 15px;
+	cursor: pointer;
+}
+#auth_bar > span:hover{
+	color: #f00;
+}
+#auth_bar > span.on{
+	color: #999;
+}
+#auth_bar > span.on:hover{
+	color: #000;
+}
+#auth_change_menu .item{
+	padding: 9px 20px 10px 20px;
+	color: #fff;
+	background-color: #00bcd4;
+	border-bottom: 1px solid #f6f5f3;
+	cursor: pointer;
+	-webkit-transition: opacity 0.2s ease-out 0s;
+	-moz-transition: opacity 0.2s ease-out 0s;
+	-o-transition: opacity 0.2s ease-out 0s;
+	transition: opacity 0.2s ease-out 0s;		
+}
+#auth_change_menu .item:hover{
+	opacity: 0.8;
+}
+#auth_change_menu .item.borderless{
+	border-top: none;
+	padding-top: 10px;	
+}
+
+#modules_change .item{
+	padding: 9px 20px 10px 20px;
+	color: #fff;
+	background-color: #ff9800;
+	border-top: 1px solid #f6f5f3;
+	cursor: pointer;
+	-webkit-transition: opacity 0.2s ease-out 0s;
+	-moz-transition: opacity 0.2s ease-out 0s;
+	-o-transition: opacity 0.2s ease-out 0s;
+	transition: opacity 0.2s ease-out 0s;		
+}
+#modules_change .item.active{
+	background-color: #f57c00;
+}
+#modules_change .item:hover{
+	opacity: 0.8;
+}
+#modules_change .item.borderless{
+	border-top: none;
+	padding-top: 10px;	
+}
+#modules_change .item:first-child{
+	border-top: none;
+	padding-top: 10px;
+}
+#module > .wrap{
+	background-color: #f6f5f3;
+	padding: 15px 20px 15px 20px;
+	min-height: 1500px;
+}
+
+#rcms_footer{
+	text-align: center;
+	padding: 20px 0px 0px 0px;
+	font-size: 13px;
+}
+#rcms_footer a{
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 1px;
+}
+#rcms_footer a:hover{
+	border-bottom: 1px solid #f00;
+}
+
+#load_screen{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	-webkit-transition: background-color 0.2s ease-out 0s;
+	-moz-transition: background-color 0.2s ease-out 0s;
+	-o-transition: background-color 0.2s ease-out 0s;
+	transition: background-color 0.2s ease-out 0s;		
+}
+#load_screen.clicked{
+	background-color: rgba(153, 153, 153, 0.65);
+}
+#load_screen .text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	text-align: center;
+	width: 300px;
+	margin: -60px 0px 0px -150px;
+	border: 4px solid #fff;
+    box-sizing: border-box;
+	padding: 20px 0px 23px 0px;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s ease-out 0s;
+	-moz-transition: opacity 0.2s ease-out 0s;
+	-o-transition: opacity 0.2s ease-out 0s;
+	transition: opacity 0.2s ease-out 0s;
+	background-color: #419de7;
+}
+#load_screen.clicked .text{
+	opacity: 1;
+}
+#load_screen .text h6{
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+#load_screen .text p{
+	padding: 15px 0px 0px 0px;
+	font-size: 16px;
+}
+#load_screen .bar_line{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 3px;
+	background-color: #555;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s ease-out 0s;
+	-moz-transition: opacity 0.3s ease-out 0s;
+	-o-transition: opacity 0.3s ease-out 0s;
+	transition: opacity 0.3s ease-out 0s;
+}
+#load_screen .bar_line.on{
+	opacity: 1;
+}
+#load_screen .bar_line > span{
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: #ffeb3b;
+	position: relative;
+	overflow: hidden;
+}
+#load_screen .bar_line > span:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-image:
+		linear-gradient(
+			-90deg, 
+			rgba(0, 0, 0, .6) 25%, 
+			transparent 25%, 
+			transparent 50%, 
+			rgba(0, 0, 0, .6) 50%, 
+			rgba(0, 0, 0, .6) 75%, 
+			transparent 75%, 
+			transparent
+	   );
+	z-index: 1;
+	background-size: 50px 50px;
+	animation: move 1.5s linear infinite;
+	overflow: hidden;
+}
+@keyframes move{
+	100%{
+	   background-position: 50px 50px;
+	}
+}

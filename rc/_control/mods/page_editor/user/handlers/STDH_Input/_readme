@@ -1,0 +1,13 @@
+HH	Поле ввода в одну строку
+		
+>>	STDH_Input("[placeholder]")
+
+		[placeholder] — значение placeholder'а
+		
+>>	Пример использования:
+	 
+	 STDH_Input("Например, some@test.com")
+	
+>>	Может запускаться без указания параметра:
+	
+	 STDH_Input()

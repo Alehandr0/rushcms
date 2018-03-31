@@ -1,0 +1,47 @@
+HH	Выводит JSON-содержимое в виде текстовых
+    полей ввода
+	
+	Данные имеют вид массива «ключ-значение» и хранятся в 
+	БД в виде JSON
+		
+>>	STDH_JSONEditor("[id_шаблона_данных_из_options.js]")
+
+	  [id_шаблона_данных_из_options.js] — id шаблона данных из options.js
+	  
+	  Пример содержимого options.js:
+	  
+		var STDH_JSONEditor_options = {
+
+			'meta_tmpl' : {  // meta_tmpl — id шаблона данных
+				
+				'p_t' : {  // ключ массива данных
+					
+					'alias' : 'Page Title страницы',  // Псевдоним поля ввода
+					'autoresize' : true,  // Автоматическое изменение размера поля ввода
+					'placeholder' : '',  // placeholder пустого поля ввода
+					
+				},
+				'm_d' : {
+					
+					'alias' : 'Meta description',
+					'autoresize' : true,
+					
+				},
+				'm_r' : {
+					
+					'alias' : 'Meta robots',
+					'autoresize' : true,
+					'default_val' : 'All',  // Значение по умолчанию. Будет подставлено, если текстовое поле оставлено пустым
+
+				},
+
+			},
+
+
+		};	  
+		
+>>	Пример использования:
+	 
+	 STDH_JSONEditor("meta_tmpl")
+	
+>>	Указание параметров обязательно

@@ -1,0 +1,13 @@
+.edit_line.STDH_CheckBox input{
+	position: relative;
+	top: 1px;
+}
+.edit_line.STDH_CheckBox span.label{
+	position: relative;
+	top: -1px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.edit_line.STDH_CheckBox span.label:hover{
+	color: #f00;
+}

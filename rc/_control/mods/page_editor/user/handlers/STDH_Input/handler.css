@@ -1,0 +1,6 @@
+.edit_line.STDH_Input input{
+	border: 1px solid #9e9e9e;
+	padding: 5px 5px 4px 5px;
+	width: 100%;
+	box-sizing: border-box;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="description" content="" />
+		<meta name="robots" content="" />
+		
+		<link rel="stylesheet" type="text/css" href="/rc/$GetGlobalVar(ControlDirName);/data/css/cssreset.css" />
+		<link rel="stylesheet" type="text/css" href="/rc/$GetGlobalVar(ControlDirName);/data/css/login.css" />
+
+		<title>Rush CMS</title>
+
+	</head>
+
+	<body>
+
+		<form id="login_form" action="/rc/$GetGlobalVar(ControlDirName);/data/php/login.php" method="POST">
+		
+			<div>
+			
+				<div class="line"><input name="userlogin" type="text" placeholder="логин" value="" autocomplete="off" data-dict="rs_login;login;placeholder" /></div>
+				<div class="line"><input name="userpass" type="password" placeholder="пароль" value="" data-dict="rs_login;password;placeholder" /></div>
+				<div class="line"><input name="submit" type="submit" value="" data-dict="rs_login;submit;value" /></div>
+			
+			</div>
+
+		</form>
+		
+		<input id="lang_value" name="lang" type="hidden" value="$GetGlobalVar(Lang);" />
+
+		<script type="text/javascript" src="/rc/$GetGlobalVar(ControlDirName);/data/js/libs/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="/rc/$GetGlobalVar(ControlDirName);/data/js/login.js"></script>
+		
+	</body>
+
+</html>

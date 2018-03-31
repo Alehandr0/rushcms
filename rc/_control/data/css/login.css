@@ -1,0 +1,56 @@
+html{
+	min-height: 100%;
+	background-color: #fff;
+}
+
+body{
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	color: #333;
+}
+#login_form{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	padding: 20px 20px 20px 20px;
+	margin: -75px 0px 0px -145px;
+}
+#login_form > div{
+	border: 1px solid #ccc;
+	padding: 20px 20px 20px 20px;
+	background-color: #fcfcfb;
+}
+#login_form.error > div{
+	border: 1px solid #f00;
+}
+#login_form > div .line{
+	padding: 10px 0px 0px 0px;
+}
+#login_form > div .line:first-child{
+	padding: 0px 0px 0px 0px;
+}
+#login_form > div .line input{
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #ccc;
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+	outline: none;
+}
+#login_form > div .line input[type="submit"]{
+	cursor: pointer;
+	background-color: #ff9800;
+	color: #fff;
+	border: 1px solid #ff9800;
+	-webkit-transition: opacity 0.2s ease-out 0s;
+	-moz-transition: opacity 0.2s ease-out 0s;
+	-o-transition: opacity 0.2s ease-out 0s;
+	transition: opacity 0.2s ease-out 0s;		
+}
+#login_form > div .line input[type="submit"]:hover{
+	opacity: 0.85;
+}

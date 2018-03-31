@@ -1,4 +1,4 @@
-Rush CMS.
+Rush CMS. Простая, гибкая и минималистичная CMS
 
 Полная документация: https://rush-cms.com
 

@@ -1,0 +1,53 @@
+.edit_line.STDH_ReadOnly .container{
+	padding: 5px 10px 8px 13px;
+    background-color: #f6f5f3;
+    border: 1px solid #c7c7c7;
+    box-sizing: border-box;
+    color: #333;
+}
+.edit_line.STDH_ReadOnly .container p{
+	padding: 0px 0px 0.5em 0px;
+	line-height: 150%;
+}
+.edit_line.STDH_ReadOnly .container h1{
+	padding: 0.5em 0px 0.5em 0px;
+	line-height: 135%;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.edit_line.STDH_ReadOnly .container h2{
+	padding: 0.5em 0px 0.5em 0px;
+	line-height: 135%;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.edit_line.STDH_ReadOnly .container h3{
+	padding: 0.5em 0px 0.5em 0px;
+	line-height: 135%;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.edit_line.STDH_ReadOnly .container h4{
+	padding: 0.5em 0px 0.5em 0px;
+	line-height: 135%;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.edit_line.STDH_ReadOnly .container h5{
+	padding: 0.5em 0px 0.5em 0px;
+	line-height: 135%;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.edit_line.STDH_ReadOnly .container h6{
+	padding: 0.5em 0px 0.5em 0px;
+	line-height: 135%;
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.edit_line.STDH_ReadOnly .container strong{
+	font-weight: 700;
+}
+.edit_line.STDH_ReadOnly .container em{
+	font-style: italic;
+}

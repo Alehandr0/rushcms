@@ -1,0 +1,153 @@
+.edit_line.STDH_ImgCollection .wrap{
+	padding: 0px 0px 0px 0px;
+}
+.edit_line.STDH_ImgCollection .wrap:after{
+	content: ' ';
+	display: block;
+	clear: both;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column{
+	float: left;
+	width: 200px;
+	text-align: center;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > p{
+	font-size: 12px;
+	font-weight: bold;		
+	padding: 10px 0px 0px 0px;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .img_wrap{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .img_wrap.noimg{
+	border: 1px solid #ddd;
+	background-image: url('pic/noimg.jpg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .img_wrap > img{
+	max-width: 100%;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .control{
+	padding: 2px 0px 0px 0px;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .control > .button{
+	display: block;
+	width: 50%;
+	float: left;
+	padding: 7px 0px 8px 0px;
+	margin: 5px 0px 5px 0px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	background-color: #51a955;
+	opacity: 0.9;
+	box-sizing: border-box;
+	border: 1px solid #fff;
+	-webkit-transition: opacity 0.2s ease-out 0s;
+	-moz-transition: opacity 0.2s ease-out 0s;
+	-o-transition: opacity 0.2s ease-out 0s;
+	transition: opacity 0.2s ease-out 0s;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .control > .button.download{
+	width: 100%;
+	height: 32px;
+	float: none;
+	clear: both;
+	background-color: #2196F3;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .control > .button.off{
+	display: none;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .control > .button:hover{
+	opacity: 1;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .image_column > .control > .button.disabled{
+	opacity: 1;
+	background-color: #e2e2e2;
+	cursor: default;
+	color: #999;		
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column{
+	margin-left: 200px;
+	padding: 0px 0px 0px 15px;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > h3{
+	font-weight: bold;
+	padding: 0px 0px 0px 0px;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .control{
+	font-weight: bold;
+	padding: 10px 0px 10px 0px;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .control > .button{
+    display: inline-block;
+    padding: 8px 0px 9px 0px;
+    color: #fff;
+    min-width: 36px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #51a955;
+    opacity: 0.9;
+    -webkit-transition: opacity 0.2s ease-out 0s;
+    -moz-transition: opacity 0.2s ease-out 0s;
+    -o-transition: opacity 0.2s ease-out 0s;
+    transition: opacity 0.2s ease-out 0s;
+    margin-left: 5px;	
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .control > .button.first{
+	margin-left: 0px;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .control > .button.del{
+	background-color: #f44336;		
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .control > .button:hover{
+	opacity: 1;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .control > .button.disabled{
+	opacity: 1;
+	background-color: #e2e2e2;
+	cursor: default;
+	color: #999;
+	display: none;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .line{
+	padding: 10px 0px 10px 0px;
+	border-top: 1px dashed #dedede;
+}
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .line > .label{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 0px 5px 0px;
+}	
+.edit_line.STDH_ImgCollection .wrap > .item > .desc_column > .line > textarea{
+	resize: none;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #9e9e9e;
+	padding: 4px 5px 5px 5px;
+	line-height: 125%;
+	height: auto;
+	vertical-align: middle;
+}
+
+@media (max-width: 600px){
+	
+	.edit_line.STDH_ImgCollection .wrap > .item > .image_column {
+		float: none;
+		width: auto;
+		padding: 0px 20px 0px 20px;
+	}
+	.edit_line.STDH_ImgCollection .wrap > .item > .desc_column {
+		margin-left: 0px;
+		padding: 0px 20px 0px 20px;
+	}		
+	
+}
+
+.std_handlers_pack_STDH_ImgCollection_modal > strong{
+	font-weight: 700;
+}

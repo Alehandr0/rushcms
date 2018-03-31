@@ -1,0 +1,22 @@
+.edit_line.STDH_TaInput .wrap{
+	position: relative;
+}
+.edit_line.STDH_TaInput .wrap.autoresize{
+	border: 1px solid #9e9e9e;
+	padding: 5px 5px 1px 5px;
+}
+.edit_line.STDH_TaInput .wrap textarea{
+	border: 1px solid #9e9e9e;
+	padding: 5px 5px 0px 5px;
+	resize: vertical;
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 26px;
+}
+.edit_line.STDH_TaInput .wrap.autoresize textarea{
+	border: none;
+	padding: 0px 0px 0px 0px;
+	resize: none;
+	box-sizing: none;
+	min-height: 1em;
+}

@@ -1,0 +1,12 @@
+HH	Текстовый редактор данных
+
+>>	STDH_TextEditor("[content_type]")
+	 
+	 [content_type] — тип содержимого (html, plain_text, php, javascript, css)
+
+>>	Пример использования:
+
+	 STDH_TextEditor("php")
+
+>>	Может запускаться без указания параметров. В этом 
+	случае тип содержимого устанавливается как html

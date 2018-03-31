@@ -1,0 +1,171 @@
+<div class="manager_head" data-dict="page_editor;manager_head;html"><!--Менеджер коллекций--></div>
+<div class="manager">
+
+	<div class="container">
+	
+		<div class="line">
+
+			
+		</div>
+	
+	</div>
+	
+	<div class="buttons">
+	
+		<div class="button add_folder off disabled" data-action="manager_button:add_folder"><div></div></div>
+		<div class="button add_file off disabled" data-action="manager_button:add_file"><div></div></div>
+		<div class="button del off disabled" data-action="manager_button:del"><div></div></div>
+		<div class="button refresh off disabled" data-action="manager_button:refresh"><div></div></div>
+	
+	</div>
+
+</div>
+
+
+<div class="error_wrap">
+
+
+
+</div>
+
+
+<div class="edit_wrap">
+
+	<div class="file_line folder">
+	
+		<div class="head e_data_obj" data-action="file_line:open_close"><span class="label"></span><span class="minimize"></span><span class="sep"></span></div>
+		<div class="content page_editor_hlines e_data_obj">
+		
+		
+		</div>
+	
+	</div>
+	
+	<div class="options_wrap">
+		
+		<div class="sort_options options_block">
+		
+			<span class="sort_button hover" data-action="files_sort:select_sort"></span>
+			<span class="sort_direction">↑</span>
+			
+		</div>
+		
+		<div class="count_options options_block">
+		
+			<span class="current_count">100</span> / <span class="total_count">1200</span>
+			<span class="count_more button hover" data-action="files_sort:get_more">[+]</span>
+			<span class="count_all button hover" data-action="files_sort:get_all">[++]</span>
+			
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="search_block">
+
+			<div class="del_files_button" data-action="files_del:del"></div>		
+		
+			<div class="input_wrap">
+		
+				<input type="text" name="files_search" value="" data-dict="page_editor;search;placeholder" placeholder="Поиск..." />
+				
+				<div class="search_clear" data-action="files_sort:search_clear"></div>
+		
+			</div>
+			
+			<div class="clear"></div>
+			
+		</div>
+		
+	</div>
+
+</div>
+
+<div class="hidden_tmpl_page_editor off">
+
+	<div data-tmpl-name="manager_item">
+	
+		<div class="head e_data_obj">
+
+			<span class="mark"></span><span class="icon"></span><span class="label"></span>
+
+		</div>
+		
+		<div class="content"></div>		
+	
+	</div>
+	
+	<div class="file_line" data-tmpl-name="file_line">
+	
+		<div class="head e_data_obj" data-action="file_line:open_close"><span class="label"></span><span class="minimize"></span><span class="sep"></span><input class="checkline" type="checkbox" value="1" data-action="file_line:check_line" /></div>
+		<div class="content page_editor_hlines e_data_obj">
+
+		</div>
+	
+	</div>	
+	
+	<div class="edit_line" data-tmpl-name="edit_line">
+		
+		<div class="head open e_data_obj" data-action="edit_line:open_close"><span class="text"></span><span class="minimize"></span></div>
+		<div class="content">
+			
+		</div>
+		
+	</div>
+	
+	<div class="save_del_block" data-tmpl-name="save_del_block">
+		
+		<div class="button save" data-action="save_del_element:save" data-dict="page_editor;save;html"><!--Сохранить--></div>
+		<div class="button del" data-action="save_del_element:del" data-dict="page_editor;delete;html"><!--Удалить--></div>
+		<div class="clear"></div>
+		<div class="fast_close off" data-action="save_del_element:fast_close">X</div>
+		
+	</div>
+	
+	<div class="empty_save_del_block" data-tmpl-name="empty_save_del_block" data-dict="page_editor;no_edit_fields;html"><!--Нет полей для ввода данных--></div>
+
+	<div class="RS_modal_line" data-tmpl-name="multi_types_element_add_window">
+
+		<div class="head" data-dict="page_editor;select_add_elem_type;html"><!--Выберите тип добавляемого элемента--></div>
+		<div class="content">
+
+		</div>
+		
+	</div>
+	
+	<div class="RS_modal_line" data-tmpl-name="select_sort_type">
+
+		<div class="head" data-dict="page_editor;select_sort_type;html"><!--Выберите сортировку--></div>
+		<div class="content">
+
+		</div>
+		
+	</div>
+	
+	<div class="content page_editor_hlines e_data_obj" data-tmpl-name="edit_lines_wrap"></div>
+	
+	
+	<div class="message error_message" data-tmpl-name="error_message_deleted_folder" data-dict="page_editor;error_message_deleted_folder;html">
+		
+		<!-- Ой! Кажется, кто-то удалил этот каталог :( Обновите родительский каталог, чтобы получить актуальный список подкаталогов -->
+
+	</div>		
+	
+	<div class="message notice" data-tmpl-name="notice_message_refresh_auto_upd_folder" data-dict="page_editor;notice_message_refresh_auto_upd_folder;html">
+		
+		<!-- В каталоге произошли изменения. Обновите каталог, чтобы увидеть их -->
+
+	</div>	
+	
+	<div class="error_message deleted_file" data-tmpl-name="error_message_deleted_file" data-dict="page_editor;error_message_deleted_file;html">
+		
+		<!-- Ой! Кажется, кто-то удалил этот файл :( Обновите родительский каталог, чтобы получить актуальный список файлов -->
+
+	</div>	
+	
+	<div class="error_message changed_file" data-tmpl-name="error_message_changed_file" data-dict="page_editor;error_message_changed_file;html">
+		
+		<!-- Ой! Кажется, кто-то изменил этот файл до вас. Сохранение не было завершено: нажмите на кнопку сохранения еще раз, когда убедитесь, что все делаете правильно  -->
+
+	</div>
+
+</div>

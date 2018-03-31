@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="description" content="Rush CMS" />
+		<meta name="robots" content="None" />
+		
+		<link rel="shortcut icon" href="/rc/$GetGlobalVar(ControlDirName);/data/pic/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/rc/$GetGlobalVar(ControlDirName);/data/pic/favicon.ico" type="image/x-icon">		
+		
+		<link rel="stylesheet" type="text/css" href="/rc/$GetGlobalVar(ControlDirName);/data/css/cssreset.css" />
+		<link rel="stylesheet" type="text/css" href="/rc/$GetGlobalVar(ControlDirName);/data/js/libs/rs.modal/rs.modal.css" />
+		<link rel="stylesheet" type="text/css" href="/rc/$GetGlobalVar(ControlDirName);/data/css/main.css" />
+		
+		$GetGlobalVar(ModsCSS);
+
+		<title>Rush CMS</title>
+
+	</head>
+
+	<body>
+	
+		<div id="auth_bar" class="std_block">
+		
+			<!--block_ch_auth--><span data-block-cond="real_auth==2" class="change_auth" data-dict="rc_main;change_rights;html"><!--смена прав--></span><!--block_ch_auth-->
+			<span class="logout" data-dict="rc_main;logout;html"><!--выход--></span>
+		
+		</div>
+		
+		<div id="auth_change_menu" class="std_block"></div>
+		
+		<div id="bar" class="std_block">
+		
+			<div id="modules_change">
+			
+				<!--block_module-->
+				<rush data-block-handler="GetModule();">
+
+					<div class="item {ModClass}" data-module-id="{ModId}">{ModName}</div>
+
+				</rush>
+				<!--block_module-->				
+				
+			</div>
+
+		</div>
+
+		<div id="module" class="std_block">
+		
+			<div class="wrap">
+			
+				$GetGlobalVar(ModuleHtml);
+
+			</div>
+		
+		</div>
+		
+		<div id="rcms_footer"><a href="https://rush-cms.com/" title="Сайт RushCMS" target="_blank">Сайт RushCMS</a></div>
+
+		<input id="auth_value" class="rc_main_data" name="auth" type="hidden" value="$GetGlobalVar(Auth);" />
+		<input id="real_auth_value" class="rc_main_data" name="real_auth" type="hidden" value="$GetGlobalVar(RealAuthVal);" />
+		<input id="lang_value" class="rc_main_data" name="lang" type="hidden" value="$GetGlobalVar(Lang);" />
+		<input id="module_path" class="rc_main_data" name="module_path" type="hidden" value="$GetGlobalVar(CurrentModulePath);" />
+		<input id="control_dir" class="rc_main_data" name="control_dir_name" type="hidden" value="$GetGlobalVar(ControlDirName);" />
+		
+		<div id="load_screen" class="off">
+		
+			<div class="bar_line"><span></span></div>
+		
+			<div class="text">
+				<h6 data-dict="rc_main;loading;html"><!--Идет загрузка--></h6>
+				<p data-dict="rc_main;wait;html"><!--Пожалуйста, подождите--></p>
+			</div>
+		
+		</div>
+		
+		<script type="text/javascript" src="/rc/$GetGlobalVar(ControlDirName);/data/js/libs/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="/rc/$GetGlobalVar(ControlDirName);/data/js/libs/rs.modal/rs.modal.js"></script>
+		<script type="text/javascript" src="/rc/$GetGlobalVar(ControlDirName);/data/js/libs/rs.fileupload/rs.fileupload.js"></script>
+		<script type="text/javascript" src="/rc/$GetGlobalVar(ControlDirName);/data/js/libs/ace.editor/ace.js"></script>
+		<script type="text/javascript" src="/rc/$GetGlobalVar(ControlDirName);/data/js/main.js"></script>
+		
+		$GetGlobalVar(ModsJS);
+		
+		<div class="hidden_tmpl off">
+		
+			<div class="item off" data-tmpl-name="modules_change_line" data-module-id=""><!--Имя модуля--></div>
+			
+			<div data-tmpl-name="ajax_error_window" data-dict="rc_main;ajax_error_window_text;html"><!--Сообщение об ощибке AJAX--></div>
+		
+		</div>
+		
+	</body>
+
+</html>

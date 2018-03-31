@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="description" content="$GetFromJSONData(data_meta,m_d,field:tree_name);" />
+		<meta name="robots" content="$GetFromJSONData(data_meta,m_r,value:All);" />
+		
+		<link rel="shortcut icon" href="/rc/pic/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/rc/pic/favicon.ico" type="image/x-icon" />
+
+		<link rel="stylesheet" type="text/css" href="/rc/css/main.css" />
+
+		<title>$GetFromJSONData(data_meta,p_t,field:tree_name);</title>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<header>
+			
+				<!--block_top_bar-->
+				<div class="top_bar fs_18" data-block-handler="SpanWrapCurrentPageLinks(<span$1>$2</span>);">
+				
+					<a href="/korzina/" title="" class="cart">Корзина <span>#GetCartCount();</span></a>
+					
+					<a href="/kontakty/" title="">Контакты</a>
+					<a href="/blog/" title="Блог">Блог</a>
+					<a href="/katalog/" title="Каталог">Каталог</a>
+				
+				</div>
+				<!--block_top_bar-->
+				
+				<div class="logo_block">
+				
+					<!--block_logo-->
+					<div class="col col_1" data-block-handler="SpanWrapCurrentPageLinks(<span$1>$2</span>);">
+					
+						<a href="/" title="На главную"><img src="/rc/pic/logo.png" alt="Логотип Crab's Shop" /></a>
+					
+					</div>
+					<!--block_logo-->
+					
+					<div class="col col_2 fs_18">
+					
+						<strong>Магазин Краба</strong> — самые бесполезные товары по случайным ценам! Только у нас, только сейчас и только для вас!
+					
+					</div>
+				
+				</div>
+			
+			</header>
+			
+			<!--block_main_page-->
+			<rush data-block-cond="tree_st_id==Главная">
+				
+				<div class="label orange">Топ Краб-товары</div>
+				
+				<!--block_main_page_items_list-->
+				<div class="c_items" data-block-handler="GetItemsList(4,data_pop DESC);">
+				
+					<a class="item transparent transition_opacity" href="{{p_url}}" title="{{TITLE_NAME}}">
+					
+						<div class="wrap">
+						
+							<img src="{{IMG}}" alt="{{TITLE_NAME}}" />
+							<h6>{{tree_name}}</h6>
+							<p>{{FORMATTED_COST}} V</p>
+							
+						</div>
+						
+					</a>
+
+				</div>
+				<!--block_main_page_items_list-->
+				
+				<div class="all_link"><a class="all_link" href="/katalog/" title="Каталог краб-товаров">Все краб-товары</a></div>
+			
+				<div class="line_sep mnp"></div>
+				
+				<div class="label blue">Краб-блог</div>
+				
+				<!--block_main_page_blog_list-->
+				<div class="blog_list" data-block-handler="GetBlogArticlesList(3);">
+				
+					<a href="{{p_url}}" title="{{TITLE_NAME}}" class="item">
+					
+						<h6>{{RUS_DATE}}</h6>
+						<h2>{{tree_name}}</h2>
+						<p>{{SHORT_TEXT}}</p>
+					
+					</a>
+				
+				</div>
+				<!--block_main_page_blog_list-->
+				
+				<div class="all_link"><a class="all_link" href="/blog/" title="Все краб-товары">Все краб-записи</a></div>
+		
+			</rush>
+			<!--block_main_page-->	
+			
+			<!--block_blog-->
+			<rush data-block-cond="tree_st_id==Блог">
+			
+				<div class="breadcrumbs">
+					<a href="/" title="Главная">Главная</a> → <span>Эта страница</span>
+				</div>			
+			
+				<div class="label blue">Краб-блог</div>
+				
+				<!--block_blog_list-->
+				<div class="blog_list" data-block-handler="GetBlogArticlesList();">
+				
+					<a href="{{p_url}}" title="{{TITLE_NAME}}" class="item">
+					
+						<h6>{{RUS_DATE}}</h6>
+						<h2>{{tree_name}}</h2>
+						<p>{{SHORT_TEXT}}</p>
+					
+					</a>
+				
+				</div>
+				<!--block_blog_list-->
+
+			</rush>
+			<!--block_blog-->
+			
+			<!--block_blog_article-->
+			<rush data-block-cond="tree_st_id==Запись блога" data-block-handler="GetThisPageBlogArticle();">
+			
+				<div class="breadcrumbs">
+					<a href="/" title="Главная">Главная</a> → <a href="/blog/" title="Блог">Блог</a> → <span>Эта статья</span>
+				</div>				
+			
+				<div class="article_wrap">
+			
+					<h1>{{tree_name}}</h1>
+					<p class="date">{{RUS_DATE}}</p>
+					
+					<div class="article_content">
+					
+						{{data_content}}
+						
+					</div>
+				
+				</div>
+
+			</rush>
+			<!--block_blog_article-->
+			
+			<!--block_contacts-->
+			<div class="contacts" data-block-cond="tree_st_id==Контакты">
+			
+				<div class="breadcrumbs">
+					<a href="/" title="Главная">Главная</a> → <span>Эта страница</span>
+				</div>
+		
+				<h1 class="label blue">Контакты Краба</h1>
+				
+				<div class="line"><span>Телефон:</span> <strong>+543 932-44-54</strong></div>
+				<div class="line"><span>Email:</span> <strong>crab@crabshop.sea</strong></div>
+				<div class="line"><span>Адрес:</span> <strong>Восточное побережье, пара кабельтовых от старого морехода</strong></div>
+			
+			</div>
+			<!--block_contacts-->	
+
+			<!--block_catalog-->
+			<rush data-block-cond="tree_st_id==Каталог">
+			
+				<div class="breadcrumbs">
+					<a href="/" title="Главная">Главная</a> → <span>Эта страница</span>
+				</div>			
+			
+				<div class="label">Краб-товары</div>
+				
+				<!--block_items_list-->
+				<div class="c_items" data-block-handler="GetItemsList(0,data_pop DESC);">
+				
+					<a class="item transparent transition_opacity" href="{{p_url}}" title="{{TITLE_NAME}}">
+					
+						<div class="wrap">
+						
+							<img src="{{IMG}}" alt="{{TITLE_NAME}}" />
+							<h6>{{tree_name}}</h6>
+							<p>{{FORMATTED_COST}} V</p>
+							
+						</div>
+						
+					</a>
+
+				</div>
+				<!--block_items_list-->
+
+			</rush>
+			<!--block_catalog-->
+
+			<!--block_catalog_item-->
+			<rush data-block-cond="tree_st_id==Товар" data-block-handler="GetThisPageItem();">
+			
+				<div class="breadcrumbs">
+					<a href="/" title="Главная">Главная</a> → <a href="/katalog/" title="Каталог">Каталог</a> → <span>Этот товар</span>
+				</div>			
+
+				<div class="current_item" data-id="{{id}}">
+				
+					<img src="{{IMG}}" alt="{{TITLE_NAME}}" />
+					
+					<div class="description">
+					
+						<h1>{{tree_name}}</h1>
+						<h2><span class="price">{{FORMATTED_COST}}</span> V</h2>
+						<div class="to_cart_button disabled transparent_font transition_bgc" data-js-action="to_cart">В корзину</div>
+						
+						<div class="text">
+							{{data_content}}
+						</div>
+					
+					</div>
+				
+				</div>
+
+			</rush>
+			<!--block_catalog_item-->
+			
+			<!--block_cart-->
+			<rush data-block-cond="tree_st_id==Корзина">
+			
+				<div class="breadcrumbs">
+					<a href="/" title="Главная">Главная</a> → <span>Эта страница</span>
+				</div>			
+
+				<div class="cart_wrap">
+
+					<h1 class="label blue">Корзина Краба</h1>
+
+					<!--block_cart_items_list-->
+					<div class="cart_items" data-block-handler="GetCartItemsList();" data-block-nocache="1">
+					
+						<div class="cart_item" data-id="{{id}}">
+						
+							<h2>{{tree_name}}</h2>
+							<h3><span>{{FORMATTED_COST}}</span> V</h3>
+						
+							<div class="del_item transition_bgc" data-js-action="del_from_cart">К черту!</div>
+						
+						</div>
+
+					</div>
+					<!--block_cart_items_list-->
+					
+					<div class="total transparent transition_opacity">Итого: <strong>15 000</strong> V</div>
+					
+					<div class="form off">
+					
+						<h6><span>Заполните форму для завершения заказа</span></h6>
+					
+						<div class="line"><input name="username" type="text" placeholder="Ваше имя" /></div>
+						<div class="line"><input name="userphone" type="text" placeholder="Ваш телефон" /></div>
+
+					</div>					
+					
+					<div class="buy_button_wrap transparent transition_opacity "><div class="buy_button transition_bgc" data-js-action="cart_buy">Купить!</div></div>
+				
+					<div class="success off"><span>Ваш заказ принят!</span><br/><br/>Когда-нибудь мы обязательно его выполним.<br/>Или нет!</div>
+				
+				</div>
+
+			</rush>
+			<!--block_cart-->			
+			
+			<div class="line_sep small mnp"></div>
+				
+			<footer>
+			
+				<p>Crab’s Shop, 2017-$GetCurrentYear();</p>
+				
+				<pre>#GetTestData();</pre>
+			
+			</footer>
+		
+		</div>
+
+		<script type="text/javascript" src="/rc/js/libs/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="/rc/js/main.js"></script>
+
+	</body>
+
+</html>

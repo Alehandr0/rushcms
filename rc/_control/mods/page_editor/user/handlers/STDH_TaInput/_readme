@@ -1,0 +1,19 @@
+HH	Поле ввода в несколько строк (textarea)
+
+>>	STDH_TaInput("[rows]","[placeholder]")
+
+	 [rows] — минимальное количество строк. Можно указать
+	  autoresize, тогда поле будет автоматически изменять 
+	  размер по содержимому. По умолчанию — 1
+	 [placeholder] — значение placeholder'а
+
+>>	Пример использования:
+
+	 STDH_TaInput("5","Например, some@test.com")
+
+>>	Может запускаться без указания параметров
+	или только с первым параметром ([rows]):
+		
+	 STDH_TaInput()
+	 STDH_TaInput("3")
+	 STDH_TaInput("autoresize")

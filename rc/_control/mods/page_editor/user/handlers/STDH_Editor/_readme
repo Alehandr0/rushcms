@@ -1,0 +1,9 @@
+HH	WYSIWYG-редактор (trumbowyg)
+		
+>>	STDH_Editor()
+
+	 Передаваемых параметров нет
+		
+>>	Пример использования:
+	 
+	 STDH_Editor()
